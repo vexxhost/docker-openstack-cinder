@@ -30,7 +30,7 @@ jobs:
           context: .
           cache-from: type=gha,scope=${{ matrix.release }}
           cache-to: type=gha,mode=max,scope=${{ matrix.release }}
-          platforms: linx/amd64
+          platforms: linux/amd64
           push: true
           build-args: |
             RELEASE=${{ matrix.release }}
