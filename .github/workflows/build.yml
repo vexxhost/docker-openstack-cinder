@@ -49,6 +49,6 @@ jobs:
             PROJECT_REF=${{ env.PROJECT_REF }}
             PROFILES=ceph qemu
             DIST_PACKAGES=
-            PIP_PACKAGES=os-brick python-cinderclient
+            PIP_PACKAGES=
           tags: |
             quay.io/vexxhost/cinder:${{ env.PROJECT_REF }}
