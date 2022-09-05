@@ -27,7 +27,7 @@ jobs:
           password: ${{ secrets.QUAY_ROBOT_TOKEN }}
       - uses: docker/build-push-action@v3.1.1
         with:
-          context: images/openstack
+          context: .
           cache-from: type=gha,scope=${{ matrix.release }}
           cache-to: type=gha,mode=max,scope=${{ matrix.release }}
           platforms: linx/amd64
