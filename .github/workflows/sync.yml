@@ -27,3 +27,5 @@ jobs:
         go-version-file: go.mod
     - name: Synchronize Image Repository
       run: go run ./cmd/atmosphere-ci image repo sync cinder
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
