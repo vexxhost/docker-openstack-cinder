@@ -43,8 +43,9 @@ jobs:
           RELEASE=${{ matrix.release }}
           PROJECT=cinder
           PROJECT_REF=${{ env.PROJECT_REF }}
+          EXTRAS=
           PROFILES=ceph qemu
-          DIST_PACKAGES=
+          DIST_PACKAGES=kubectl
           PIP_PACKAGES=
         cache-from: type=gha,scope=${{ matrix.release }}
         cache-to: type=gha,mode=max,scope=${{ matrix.release }}
