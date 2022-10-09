@@ -43,6 +43,7 @@ jobs:
         build-args: |-
           RELEASE=${{ matrix.release }}
           PROJECT=cinder
+          PROJECT_REPO=https://github.com/openstack/cinder
           PROJECT_REF=${{ env.PROJECT_REF }}
           EXTRAS=
           PROFILES=ceph qemu
