@@ -51,6 +51,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         build-args: |-
+          BUILDER_IMAGE=quay.io/vexxhost/openstack-builder-${{ matrix.from }}
           RUNTIME_IMAGE=quay.io/vexxhost/openstack-runtime-${{ matrix.from }}
           RELEASE=${{ matrix.release }}
           PROJECT=cinder
